@@ -20,6 +20,14 @@ contract Finhaven is ERC20Burnable, ERC20Pausable, ERC20Lockable{
         _mint(owner, initialSupply);
     }
 
+    function pause() public virtual onlyOwner{
+        _pause();
+    }
+
+    function unpause() public virtual onlyOwner{
+        _unpause();
+    }
+
     function _beforeTokenTransfer(
     address from,
     address to,

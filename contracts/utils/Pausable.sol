@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.0;
 
-import "../utils/Context.sol";
-import "../extensions/Ownable.sol";
+import "./Context.sol";
+import "./Ownable.sol";
 
 /**
  * @dev Contract module which allows children to implement an emergency stop
