@@ -14,10 +14,12 @@ contract Finhaven is ERC20Burnable, ERC20Pausable, ERC20Lockable{
     constructor(
         string memory name,
         string memory symbol,
-        uint256 initialSupply,
         address owner
     ) ERC20(name, symbol) {
-        _mint(owner, initialSupply);
+    }
+
+    function mint(address to, uint256 amount) public virtual onlyOwner {
+      _mint(to, amount);
     }
 
     function pause() public virtual onlyOwner{
