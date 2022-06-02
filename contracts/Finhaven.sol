@@ -18,7 +18,7 @@ contract Finhaven is ERC20Burnable, ERC20Pausable, ERC20Lockable{
     ) ERC20(name, symbol) {
     }
 
-    function mint(address to, uint256 amount) public virtual onlyOwner {
+    function mint(address to, uint256 amount) public onlyOwner {
       _mint(to, amount);
     }
 

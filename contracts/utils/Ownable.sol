@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.0;
+import "./Context.sol";
 
-abstract contract Ownable {
+abstract contract Ownable is Context {
     address internal _owner;
 
     event OwnershipTransferred(
