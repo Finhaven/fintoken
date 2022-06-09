@@ -17,9 +17,10 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
+require("dotenv").config();
+
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic =
-  "win destroy bundle useful squirrel clerk alarm group genuine timber outdoor dry";
+const mnemonic = process.env.RECOVERY_PHRASE;
 
 module.exports = {
   plugins: ["truffle-plugin-debugger"],
@@ -43,11 +44,12 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://bsc-dataseed1.binance.org/`,
+          process.env.BINANCE_URL,
+          // `https://bsc-dataseed1.binance.org/`,
           0,
           5
         ),
-      network_id: 56,
+      network_id: process.env.CHAIN_ID,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true,
