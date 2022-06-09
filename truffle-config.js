@@ -1,24 +1,3 @@
-// const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic =
-  "win destroy bundle useful squirrel clerk alarm group genuine timber outdoor dry";
-// module.exports = {
-//   networks: {
-//     binance: {
-//       provider: () =>
-//         new HDWalletProvider(
-//           mnemonic,
-//           `https://data-seed-prebsc-1-s1.binance.org:8545`,
-//           0,
-//           5
-//         ),
-//       network_id: 97,
-//       confirmations: 10,
-//       timeoutBlocks: 200,
-//       skipDryRun: true,
-//     },
-//   },
-// };
-
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -39,8 +18,8 @@ const mnemonic =
  *
  */
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-// const fs = require("fs");
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+const mnemonic =
+  "win destroy bundle useful squirrel clerk alarm group genuine timber outdoor dry";
 
 module.exports = {
   plugins: ["truffle-plugin-debugger"],
@@ -56,7 +35,6 @@ module.exports = {
 
   networks: {
     development: {
-      //from: "0x327A78135507210FA0BC1F60798360C1349AA20D", // Defaults to first address from Ganache
       host: "127.0.0.1",
       port: 7545,
       network_id: "*",
@@ -65,11 +43,11 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://speedy-nodes-nyc.moralis.io/d6d6b19072a7b5e9494375e1/bsc/testnet`,
+          `https://bsc-dataseed1.binance.org/`,
           0,
           5
         ),
-      network_id: 97,
+      network_id: 56,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true,
