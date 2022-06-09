@@ -17,8 +17,7 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-require("dotenv").config();
-
+require("dotenv").config({ path: __dirname + "/.env" });
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = process.env.RECOVERY_PHRASE;
 

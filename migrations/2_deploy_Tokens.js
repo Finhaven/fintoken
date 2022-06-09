@@ -1,5 +1,4 @@
 const MyToken = artifacts.require("Finhaven");
-require("dotenv").config();
 
 module.exports = async function (deployer, network, accounts) {
   // Deploy MyToken
