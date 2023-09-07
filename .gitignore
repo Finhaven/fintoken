@@ -1,0 +1,5 @@
+.env
+artifacts/
+build/
+cache/
+node_modules/
